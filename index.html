@@ -25,7 +25,7 @@
     <div class="reveal">
       <div class="slides">
 
-        <section>
+        <section data-background-image="/img/bug-34375_1280.png">
           <h1>Plack::Debugger meets Dancer2</h1>
           <p>Peter Mottram (SysPete) &lt;peter@sysnix.com&gt;</p>
           <p>Perl::Dancer Conference 2016, Vienna</p>
@@ -33,9 +33,136 @@
 
         <section>
           <section>
-            <h1>2006</h2>
+            <h1>LPW 2014</h1>
+            <img class="stretch" src="/img/stevan-lpw-2014.png">
           </section>
           <section>
+            <h1>Stevan</h1>
+            <img class="stretch" src="/img/stevan-little.jpg">
+          </section>
+        </section>
+
+        <section>
+          <p>History of Debugging on the WWW</p>
+        </section>
+
+        <section>
+          <section>
+            <h1>1994</h1>
+          </section>
+          <section>
+            <h1>Perl 5</h1>
+          </section>
+          <section>
+            <pre><code data-trim>
+#!/usr/local/bin/perl
+print "Content-type: text/html\n\n";
+print "&lt;html&gt;\n";
+print "&lt;body&gt;\n";
+print "&lt;h1&gt;HELLO WORLD!&lt;/h1&gt;\n";
+print "&lt;/body&gt;\n";
+print "&lt;/html&gt;\n";
+            </code></pre>
+          </section>
+          <section>
+            <pre>
+              warn("WTF is going on !!!!!! $x");
+            </pre>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h1>1996</h1>
+          </section>
+          <section>
+            <h1>CGI.<span style="text-transform:none">pm</span></h1>
+          </section>
+          <section>
+            <pre><code data-trim>
+#!/usr/local/bin/perl
+use CGI qw(:all); # CGI.pm module is very useful!   
+print   
+      header,   
+      start_html,   
+      h1("HELLO WORLD!"),   
+      end_html; 
+            </code></pre>
+          </section>
+          <section>
+            <pre>
+              warn("WTF is going on !!!!!! $x");
+            </pre>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h1>1999</h1>
+          </section>
+          <section>
+            <h1>HTML::Mason</h1>
+          </section>
+          <section>
+            <p>autohandler</p>
+            <pre><code data-trim>
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;&lt;% $title %&gt;&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;&lt;% $title %&gt;&lt;/h1&gt;
+%   $m-&gt;call_next;
+  &lt;/body&gt;
+&lt;/html&gt;
+            </code></pre>
+          </section>
+          <section>
+
+          </section>
+          <section>
+            <pre>
+              warn("WTF is going on !!!!!! $x");
+            </pre>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h1>2002</h1>
+          </section>
+          <section>
+            <h1>HTML::Mason::Exception</h1>
+          </section>
+        </section>
+
+
+        <section>
+          <section>
+            <img src="/img/asp.png">
+          </section>
+          <section>
+            <pre>
+Response.Write("WTF is going on !!!!!!");
+Response.Write(x);
+            </pre>
+          </section>
+          <section>
+            <pre>
+Response.Write("&lt;!--");
+Response.Write("WTF is going on !!!!!!");
+Response.Write(x);
+Response.Write("--&gt;");
+            </pre>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h1>2001</h2>
+          </section>
+          <section>
+            <h1>Java</h1>
             <img class="stretch" src="/img/firebug.png">
           </section>
         </section>
